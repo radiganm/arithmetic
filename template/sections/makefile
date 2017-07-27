@@ -12,7 +12,7 @@ vpath %.mp .
 VPATH = .
 
 MP_FILES = \
-{% for k_n in dat.items() %}{% for factors in k_n[1]['factor_list'] %}  Number_{{k_n[0]}}_factors_{{k_n[1]['factor_string']}}.pdf \
+{% for n_k in dat.items() %}{% for k_k in n_k[1].items() %}  Number_{{n_k[0]}}_factors_{{k_k[1]['factors_string']}}.pdf \
 {% endfor %} {% endfor %}  null
 
 PDF_FILES = $(MP_FILES:.mp=.pdf)

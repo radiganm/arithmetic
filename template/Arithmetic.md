@@ -3,11 +3,14 @@
 
 # Multiplication
 
-{% for k_n in dat.items() %}
-## The Number {{k_n[0]}}
+{% for n_k in dat.items() %}
+## The Number {{n_k[0]}}
 
-  {% for factors in k_n[1]['factor_list'] %}
-### Factor {{k_n[1]['factor_expression']}}
+  {% for k_k in n_k[1].items() %}
+### Factor {{k_k[1]['factor_expression']}} , factors {{k_k[1]['factors_string']}}
+
+\resizebox{6in}{!}{\includegraphics{output/sections/figures/Number_{{n_k[0]}}_factors_{{k_k[1]['factors_string']}}}}
+
   {% endfor %}
 
 {% endfor %}
