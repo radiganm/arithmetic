@@ -9,6 +9,8 @@ from functools import reduce
 import string
 import random
 
+COVER_FRONT = 'for Ashton, Lyla, Neomi, Ruth, and Malakai'
+
 def factorize_list(val):
   return [(int(i), int(val / i)) for i in range(1, int(val**0.5)+1) if val % i == 0]
 
