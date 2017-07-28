@@ -1,7 +1,7 @@
 {% set one = '{#1}' %}
 ---
 title: Arithmetic
-author: Mac Radigan
+author: for Ashton, Lyla, Neomi, Ruth, and Malakai
 toc: yes
 header-includes:
  - \usepackage{graphicx}
