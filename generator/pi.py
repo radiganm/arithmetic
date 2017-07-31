@@ -15,13 +15,19 @@ from os.path import join, splitext
 from os import walk, system
 from collections import OrderedDict
 from functools import reduce
+from itertools import permutations
 import string
 import random
+import pdb
 
 COVER_FRONT = 'for Ashton, Lyla, Neomi, Ruth, and Malakai'
 
-def factorize_list(val):
-  return [(int(i), int(val / i)) for i in range(1, int(val**0.5)+1) if val % i == 0]
+def permute_list(xs):
+  ys = [set(permutations(x)) for x in xs]
+  return [x for y in ys for x in y]
+
+def factorize_list(n):
+  return [(int(i), int(n / i)) for i in range(1, int(n**0.5)+1) if n % i == 0]
 
 def factorize(n):    
   return set(reduce(list.__add__, ([int(i), int(n/i)] for i in range(1, int(n**0.5) + 1) if n % i == 0)))
@@ -35,7 +41,8 @@ dat = OrderedDict([])
 
 for n in ns:
   dat[n] = {}
-  factor_list = factorize_list(n)
+  factor_list = permute_list(factorize_list(n))
+ #pdb.set_trace()
   for k, factors in enumerate(factor_list):
     dat[n][k] = {}
     dat[n][k]['factors'] = factors
