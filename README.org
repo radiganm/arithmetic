@@ -1,4 +1,7 @@
 #+TITLE: arithmetic
-#+AUTHOR: Mac Radigan
+#+AUTHOR: Copyright (C)  2017  Mac Radigan.
+#+LICENSE: GNU Free Documentation License, Version 1.3, 3 November 2008
+#+SPDX-License-Identifier: GFDL-1.3
+#+PDF: https://github.com/radiganm/arithmetic/blob/master/Arithmetic.pdf
 
  # *EOF* 
